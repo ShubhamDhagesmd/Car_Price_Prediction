@@ -34,7 +34,7 @@ def predict():
         if(Seller_Type_Individual=='Individual'):
             Seller_Type_Individual=1
         else:
-            Seller_Type_Individual=0
+            Seller_Type_Individual=0	
         Transmission_Mannual=request.form['Transmission_Mannual']
         if(Transmission_Mannual=='Mannual'):
             Transmission_Mannual=1
