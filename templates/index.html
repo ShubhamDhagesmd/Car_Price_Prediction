@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vehicle Price Prediction</title>
 </head>
 
 <body>
-
-    <div style="color:blue">
+   
+    <div style="color:rgb(3, 0, 3)">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive analysis</h2>
-            <h3>Year</h3>
+            <h1>Vechile Price Prediction</h1>
+        
+            <h2>Year</h2>
             <input id="first" name="Year" type="number ">
-            <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="Present_Price" required="required">
-            <h3>How Many Kilometers Drived?</h3><input id="third" name="Kms_Driven" required="required">
-            <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
+            <h3>What is the Showroom Price?(1 lakh = 1)</h3><br><input id="second" name="Present_Price" required="required">
+            <h3>How Many Kilometers Driven?</h3><input id="third" name="Kms_Driven" required="required">
+            <h3>How much owners previously it has(0 or 1 or 3) ?</h3><br><input id="fourth" name="Owner" required="required">
             <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
                 <option value="Diesel">Diesel</option>
@@ -27,10 +28,10 @@
                 <option value="Individual">Individual</option>
             </select>
             <h3>Transmission type</h3><br><select name="Transmission_Mannual" id="research" required="required">
-                <option value="Mannual">Manual Car</option>
-                <option value="Automatic">Automatic Car</option>
+                <option value="Mannual">Manual</option>
+                <option value="Automatic">Automatic</option>
             </select>
-            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br><br><button id="sub" type="submit ">Calculate</button>
             <br>
 
 
@@ -40,17 +41,21 @@
 
 
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h1>Result is<h1>
     </div>
 
 
 
 
     <style>
+        
         body {
-            background-color: lightslategray;
-            text-align: center;
+            margin: 0px;
             padding: 0px;
+            background-image: url("Auddi.jpg");
+            margin-left: 10%;
+            text: align 100px;
+            padding: 100px;
         }
 
         #research {
@@ -66,7 +71,7 @@
             border-style: solid;
             font-family: cursive;
             text-align: center;
-            background-color: rgb(168, 131, 61);
+            background-color: rgba(9, 236, 252);
             font-size: medium;
             position: absolute;
             width: 700px;
@@ -87,7 +92,7 @@
         }
 
         #fuel:hover {
-            background-color: coral;
+            background-color: rgba(9, 236, 252);
         }
 
         #research {
@@ -99,7 +104,7 @@
         }
 
         #research:hover {
-            background-color: coral;
+            background-color: rgba(9, 236, 252);
         }
 
         #resea {
@@ -111,7 +116,7 @@
         }
 
         #resea:hover {
-            background-color: coral;
+            background-color: rgba(9, 236, 252);
         }
 
         #sub {
@@ -123,7 +128,7 @@
         }
 
         #sub:hover {
-            background-color: darkcyan;
+            background-color: rgba(9, 236, 252);
         }
 
         #first {
